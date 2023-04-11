@@ -17,9 +17,11 @@ Método consultarDatos: permitirá mostrar todos los datos de la cuenta.
 public class CuentaBancariaServicio {
 
     private Scanner leer = new Scanner(System.in);
+    private CuentaBancaria c1;
+   
 
     public CuentaBancaria ingresarSaldo() {
-        CuentaBancaria c1 = new CuentaBancaria();
+       
         System.out.println("ingrese monto a agregar");
         double monto = leer.nextDouble();
         c1.setSaldoActual(c1.getSaldoActual() + monto);
@@ -28,7 +30,7 @@ public class CuentaBancariaServicio {
     }
 
     public CuentaBancaria retirar() {
-        CuentaBancaria c1 = new CuentaBancaria();
+        
         double total = 0;
 
         System.out.println("ingrese monto a retirar");
@@ -45,7 +47,7 @@ public class CuentaBancariaServicio {
 
     }
     public CuentaBancaria extraccionR() {
-        CuentaBancaria c1 = new CuentaBancaria();
+        
         boolean val=true;
         double monto;
         do{
@@ -67,20 +69,13 @@ public class CuentaBancariaServicio {
       
     }
     public void consultaSaldo(){
-        CuentaBancaria c1 = new CuentaBancaria();
+        
         System.out.println("el saldo actual es " + c1.getSaldoActual());
         
     }
-    public void consulta(){
-        CuentaBancaria c1 = new CuentaBancaria();
-        System.out.println(c1.toString());
-        
-        
-        
-        
-    }
-     public void crearCuenta() {
-        CuentaBancaria c1 = new CuentaBancaria();
+    
+     public  void crearCuenta() {
+        c1 = new CuentaBancaria();
         System.out.println("ingrese numero de cuenta");
         c1.setNumeroCuenta( leer.nextInt());
          System.out.println(" ingrese dni");
@@ -88,5 +83,13 @@ public class CuentaBancariaServicio {
          System.out.println("ingrese saldo");
          c1.setSaldoActual(leer.nextDouble());
          
- }     
+ }   
+     public void consulta(){
+      
+        System.out.println(c1.toString());
+        
+        
+        
+        
+    }
 }

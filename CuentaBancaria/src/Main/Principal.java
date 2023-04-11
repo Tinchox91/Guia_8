@@ -10,7 +10,7 @@ public class Principal {
 
    private static Scanner leer = new Scanner(System.in);
     public static void main(String[] args) {
-        CuentaBancaria c1 = new CuentaBancaria();
+      //  CuentaBancaria c1 = new CuentaBancaria();
         
         CuentaBancariaServicio serv = new  CuentaBancariaServicio();
         boolean val = true;
