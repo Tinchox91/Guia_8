@@ -6,10 +6,10 @@ import java.util.Scanner;
 
 
 public class CafeteraServicio {
-    private Cafetera cafe;
+   Cafetera cafe = new Cafetera();
     private static Scanner leer = new Scanner(System.in);
      public void llenarCafetera(){
-         cafe.setCapacidadMax(cafe.getCapacidadActual());
+         cafe.setCapacidadActual(cafe.getCapacidadMax());
          
      }
      
@@ -28,7 +28,7 @@ public class CafeteraServicio {
          }
      }
          public void vaciarCafetera(){
-         cafe.setCapacidadMax(0);
+         cafe.setCapacidadActual(0);
          
      }
           public void agregarCafe(){
@@ -36,6 +36,9 @@ public class CafeteraServicio {
               cafe.setCapacidadActual(leer.nextInt());
          
      }
+          public void mostrar(){
+              System.out.println(cafe.toString());
+          }
          
          
          

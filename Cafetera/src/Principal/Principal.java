@@ -21,7 +21,8 @@ public class Principal {
             System.out.println("2. Servir taza ");
             System.out.println("3. Vaciar cafetera");
             System.out.println("4. Agregar café");
-            System.out.println("5. Salir");
+            System.out.println("5.Mostrar");
+            System.out.println("6. Salir");
            
             int ope = leer.nextInt();
             switch (ope){
@@ -40,6 +41,9 @@ public class Principal {
                     serv.agregarCafe();
                     break;
                 case 5:
+                    serv.mostrar();
+                    break;
+                    case 6:
                     val=false;
                     break;
                 default:
