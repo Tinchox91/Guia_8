@@ -18,7 +18,7 @@ public class CuentaBancariaServicio {
 
     private Scanner leer = new Scanner(System.in);
     private CuentaBancaria c1;
-   
+  // CuentaBancaria c1= new CuentaBancaria();
 
     public CuentaBancaria ingresarSaldo() {
        
