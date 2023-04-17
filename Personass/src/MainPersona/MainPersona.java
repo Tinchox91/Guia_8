@@ -15,19 +15,43 @@ public class MainPersona {
         boolean [] mayor = new boolean [4];
         int [] imc = new int [4];
         ServicioPersona serv = new ServicioPersona();
-        for (int i =0; i< 4 ;i++){
-           p[i]= serv.crearPersona();
-           
-           // p[i] = new Persona();
-            //p[i]=p1;
-            mayor[i]= serv.esMayorDeEdad(p[i].getEdad());
-            imc[i] =serv.calcularIMC(p[i].getPeso(),p[i].getAltura());
-            
-            System.out.println(p[i].getEdad()); 
-            System.out.println(p[i].getPeso());
-          
-}
-        for (int i=0;i<4;i++){
+        int mayores=0;
+        int menores=0;
+        int bajop=0;
+        int idealp=0;
+        int altop=0;
+        for (int i = 0; i < 4; i++) {
+            p[i] = serv.crearPersona();
+
+            mayor[i] = serv.esMayorDeEdad(p[i].getEdad());
+            imc[i] = serv.calcularIMC(p[i].getPeso(), p[i].getAltura());
+            if (mayor[i]==true){
+                mayores++;
+              
+            }else {
+              menores ++;  
+            }
+            if (imc[i]==-1){
+             bajop++;   
+            }else if (imc[i]==0){
+                idealp++;
+                
+            }else if (imc[i]==1) {
+                altop++;
+                
+            }
+         
+            // System.out.println(p[i].getEdad());
+
+            //System.out.println(p[i].getPeso());
+
+        }
+        mayores= mayores / 4;
+         menores=menores/4;
+         bajop=bajop/4;
+         idealp=idealp/4;
+       altop=altop/4;
+        for (int i = 0; i < 4; i++) {
             
             if (mayor[i]==true){
                 System.out.println(p[i].getNombre()+" es mayor de edad");
@@ -49,7 +73,11 @@ public class MainPersona {
             
         }
         
-        
+        System.out.println("el promedio de mayores es "+mayores);
+        System.out.println("el promedio de menores es "+menores);
+        System.out.println("el promedio de bajo peso es "+bajop);
+        System.out.println("el promdedio de peso ideal es "+idealp);
+        System.out.println("el promedio de sobrepeso es "+altop);
         
     }   
         
